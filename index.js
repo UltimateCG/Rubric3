@@ -25,8 +25,12 @@ app.post("/data", (req, res) => {
             return res.status(500).send("Error al guardar el archivo.");
         }
         res.redirect(`/data/${nombreArchivo}`);
-        //res.download(rutaArchivo)
     });
 });
+
+app.get("/data/:nombreArchivo", (req,res) =>{
+    const rutaArchivo = path.join(__dirname, "public", "data", req.params.nombreArchivo);
+    res.download(rutaArchivo);
+})
 
 app.listen(port,()=>(console.log(`app ejecutándose en el puerto ${port}`)))
