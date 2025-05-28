@@ -7,6 +7,9 @@ app.use(express.static("public"))
 app.use(express.urlencoded({extended:true}))
 
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+})
 app.post("/data", (req, res) => {
     console.log(req.body);
     const { id, nombre, apellido, titulo, autor, editorial, anyo_publicacion } = req.body;
