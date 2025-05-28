@@ -33,7 +33,7 @@ app.post("/data", (req, res) => {
 });
 
 app.get("/download/:nombreArchivo", (req,res) =>{
-    const rutaArchivo = path.join(__dirname, "public", "data", req.params.nombreArchivo);
+    const rutaArchivo = path.join(__dirname, "data", req.params.nombreArchivo);
     res.download(rutaArchivo);
 })
 
