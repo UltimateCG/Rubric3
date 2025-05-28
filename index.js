@@ -15,6 +15,7 @@ app.post("/data", (req, res) => {
     const { id, nombre, apellido, titulo, autor, editorial, anyo_publicacion } = req.body;
 
     if (!id || !nombre || !apellido || !titulo || !autor || !editorial || !anyo_publicacion) {
+        console.error("Error, datos faltantes");
         return res.redirect("/error.html");
     }
     console.log(req.body);
