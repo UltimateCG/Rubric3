@@ -1,0 +1,7 @@
+ID: 1042246339
+Nombre: Claudio
+Apellido: González
+Título: El Tunel
+Autor: Ernesto Sabato
+Editorial: Angel Leiva
+Año de publicación: 1948
