@@ -1,6 +1,6 @@
 ID: 1042246339
 Nombre: Claudio
-Apellido: González
+Apellido: González Doria
 Título: El Tunel
 Autor: Ernesto Sabato
 Editorial: Angel Leiva
