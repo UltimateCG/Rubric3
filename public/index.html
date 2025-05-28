@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red Hat Display">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<header>
+		<img src="./assets/Logo_cuc.png" alt="Logo_cuc" class="logo">
+	</header>
+
+	<section class="main">
+		<table class="form">
+			<thead>
+				<tr><th colspan="2"><h1 class="titles">Solicitud de préstamo</h1></th></tr>
+			</thead>
+			<tbody>
+				<form action="http://localhost:3001/data" method="POST">
+					<tr class="cell">
+						<td>
+							<p for="nombre" class="label"><b>Nombre</b></p>
+							<input type="text" placeholder="Ingrese su nombre" name="nombre">
+						</td>
+						<td>
+							<p for="apellido" class="label"><b>Apellido</b></p>
+							<input type="text" placeholder="Ingrese su apellido" name="apellido">
+						</td>
+					</tr>
+
+					<tr class="cell">
+						<td colspan="2">
+							<p for="id" class="label"><b>Identificación</b></p>
+							<input type="number" placeholder="Ingrese su identificación" name="id">
+						</td>
+					</tr>
+						
+					<tr><td colspan="2"><h2 class="titles">Información del Libro</h1></td></tr>
+					<tr class="cell">
+						<td>
+							<p for="titulo" class="label"><b>Título</b></p>
+							<input type="text" placeholder="Ingrese el título" name="titulo">
+						</td>
+						<td>
+							<p for="autor"class="label"><b>Autor</b></p>
+							<input type="text" placeholder="Ingrese el autor" name="autor">
+						</td>
+					</tr>
+
+					<tr class="cell">
+						<td>
+							<p for="editorial" class="label"><b>Editorial</b></p>
+							<input type="text" placeholder="Ingrese la editorial" name="editorial">
+						</td>
+						<td>
+							<p for="anyo_publicacion" class="label"><b>Año de publicación</b></p>
+							<input type="number" placeholder="Ingrese año de publicacion" name="anyo_publicacion">
+						</td>
+					</tr>	
+					<tr class=cell"><td colspan="2" class="send"><input type="submit" id="send"></td></tr>
+				</form>
+			</tbody>
+		</table>
+	</section>
+
+	<footer>
+		<div class="container">
+            <p>Hecho por Claudio González</p>
+            <div class="social-media">
+                <div>
+                    <a href="https://github.com/UltimateCG" target="_blank" aria-label="GitHub de Claudio Gonzalez">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+            </div>
+				<p>Todos los derechos reservados.</p>
+            </div>
+	</footer>
+</body>
+</html>
