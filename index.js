@@ -24,11 +24,11 @@ app.post("/data", (req, res) => {
             console.error("Error al guardar el archivo:", err);
             return res.status(500).send("Error al guardar el archivo.");
         }
-        res.redirect(`/data/${nombreArchivo}`);
+        res.redirect(`/download/${nombreArchivo}`);
     });
 });
 
-app.get("/data/:nombreArchivo", (req,res) =>{
+app.get("/download/:nombreArchivo", (req,res) =>{
     const rutaArchivo = path.join(__dirname, "public", "data", req.params.nombreArchivo);
     res.download(rutaArchivo);
 })
