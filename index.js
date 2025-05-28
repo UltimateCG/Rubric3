@@ -12,13 +12,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
 app.post("/data", (req, res) => {
-    console.log(req.body);
     const { id, nombre, apellido, titulo, autor, editorial, anyo_publicacion } = req.body;
 
     if (!id || !nombre || !apellido || !titulo || !autor || !editorial || !anyo_publicacion) {
         return res.redirect("/error.html");
     }
-
+    console.log(req.body);
     const contenido = `ID: ${id}\nNombre: ${nombre}\nApellido: ${apellido}\nTítulo: ${titulo}\nAutor: ${autor}\nEditorial: ${editorial}\nAño de publicación: ${anyo_publicacion}\n`;
     const nombreArchivo = `id_${id}.txt`;
     const rutaArchivo = path.join(__dirname, "data", nombreArchivo);
