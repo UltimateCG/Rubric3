@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 app.use(express.static("public"))
 app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
 
 app.get('/', (req, res) => {
@@ -20,7 +21,7 @@ app.post("/data", (req, res) => {
 
     const contenido = `ID: ${id}\nNombre: ${nombre}\nApellido: ${apellido}\nTítulo: ${titulo}\nAutor: ${autor}\nEditorial: ${editorial}\nAño de publicación: ${anyo_publicacion}\n`;
     const nombreArchivo = `id_${id}.txt`;
-    const rutaArchivo = path.join(__dirname, "public", "data", nombreArchivo);
+    const rutaArchivo = path.join(__dirname, "data", nombreArchivo);
 
     fs.writeFile(rutaArchivo, contenido, (err) => {
         if (err) {
